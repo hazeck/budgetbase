@@ -1,12 +1,74 @@
-# React + Vite
+# BudgetBase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A full-stack budget tracking app built with Flask and React.**  
+Track expenses, categorize spending, and improve your financial habits with a simple and secure dashboard.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**BudgetBase** helps users:
+- Register and log in securely
+- Create and manage spending categories
+- Log expenses per category
+- View monthly totals
+- Protect and isolate user data using authentication
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend – Flask
+- Flask
+- Flask SQLAlchemy
+- Flask JWT Extended
+- Flask CORS
+- Flask Bcrypt
+- PostgreSQL (or SQLite for local development)
+- Marshmallow (optional, for serialization)
+
+### Frontend – React
+- React (Vite)
+- React Router
+- Axios (or fetch)
+- Context API for auth state
+- LocalStorage for token persistence
+- Tailwind CSS or plain CSS for styling
+
+## Features
+
+- JWT-based authentication
+- Protected API routes using `@jwt_required`
+- User-specific data filtering
+- CRUD functionality for:
+  - Categories
+  - Expenses
+- Responsive and dynamic frontend
+- Conditional rendering based on login status
+- Optional stretch goals: Chart visualizations, budget alerts, pagination
+
+## Local Setup Instructions
+
+Clone the repository and navigate into the project:
+
+bash
+git clone git@github.com:hazeck/budgetbase.git
+cd budgetbase
+In one terminal, set up and run the Flask backend:
+
+bash
+Copy
+Edit
+cd backend
+python3 -m venv venv
+source venv/bin/activate        # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+flask db upgrade                # Only if using Flask-Migrate
+flask run
+The Flask server should start at:
+http://localhost:5000
+
+In a second terminal, set up and run the React frontend:
+
+bash
+Copy
+Edit
+cd frontend
+npm install
+npm run dev
