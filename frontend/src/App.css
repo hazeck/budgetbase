@@ -1,0 +1,260 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* General container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Buttons */
+button,
+.cta-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button:hover,
+.cta-button:hover {
+  background-color: #135ba1;
+}
+
+/* Forms */
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+form h2 {
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navbar */
+nav {
+  background-color: #1976d2;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 2rem;
+}
+
+.expense-item {
+  background: #ffffff;
+  border-left: 6px solid #1976d2;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-item button {
+  margin-left: 0.5rem;
+}
+
+/* Landing Page */
+.landing-page {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #e3f2fd, #f4f6f8);
+}
+
+.landing-hero {
+  margin-bottom: 3rem;
+}
+
+.landing-hero h1 {
+  font-size: 3rem;
+  color: #1976d2;
+  margin-bottom: 0.5rem;
+}
+
+.landing-hero p {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1976d2;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.landing-footer {
+  margin-top: 2rem;
+}
+
+.landing-footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e3f2fd;
+  padding: 1rem;
+}
+
+.auth-form {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+}
+
+.auth-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #1565c0;
+}
+
+.switch-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.switch-link a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
